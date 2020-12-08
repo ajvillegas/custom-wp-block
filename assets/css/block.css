@@ -1,0 +1,14 @@
+.wp-block-cwpb-cta-section {
+	padding: 40px;
+}
+
+.wp-block-cwpb-cta-section .block-wrap > *,
+.wp-block-cwpb-cta-section .block-editor-block-list__layout > * {
+	margin: 0 !important;
+	max-width: none;
+}
+
+.wp-block-cwpb-cta-section .block-wrap > * + *,
+.wp-block-cwpb-cta-section .block-editor-block-list__layout > * + * {
+	margin-top: 40px !important;
+}
