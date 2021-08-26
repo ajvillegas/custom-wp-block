@@ -46,8 +46,9 @@ add_action( 'enqueue_block_editor_assets', 'cwpb_register_block_editor_assets' )
  *
  * Dependencies:
  * wp-blocks - Block type registration.
- * wp-editor - Building blocks for WordPress editors.
+ * wp-editor - Handles the BlockControls and RichText components.
  * wp-element - The WordPress Element abstraction layer atop React.
+ * wp-components - React components used for adding sidebar controls.
  * wp-i18n - Internationalization utilities for client-side localization.
  *
  * @since 1.0.0
@@ -59,7 +60,7 @@ function cwpb_register_block_editor_assets() {
 	wp_enqueue_script(
 		'cwpb-editor', // Script handle.
 		plugin_dir_url( __FILE__ ) . 'assets/js/block.js', // Register the block here.
-		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-i18n' ), // Dependencies, described above.
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-components', 'wp-i18n' ), // Dependencies, described above.
 		filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/block.js' ), // filemtime — Gets file modification time.
 		true // Load in footer.
 	);
